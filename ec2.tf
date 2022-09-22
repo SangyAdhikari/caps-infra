@@ -45,10 +45,6 @@ resource "aws_instance" "instance_type1" {
   }
 }
 
-resource "aws_eip" "lb" {
-  instance = aws_instance.instance_type.id
-  vpc      = true
-}
 
 resource "aws_instance" "instance_type2" {
   ami                         = "ami-0568773882d492fc8"
